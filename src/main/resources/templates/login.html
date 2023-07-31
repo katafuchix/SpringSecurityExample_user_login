@@ -9,8 +9,8 @@
         <form th:action="@{/login}" method="post" name="Login_Form"
             class="form-signin">
             <h2 class="form-signin-heading">ログインしてください</h2>
-
             <hr class="colorgraph">
+            <p th:if="${param.error}">ログインに失敗しました</p>
             <br>
             <input type="text"  name="username" placeholder="username" /><br>
             <input type="password"  name="password" placeholder="password" /> <br>

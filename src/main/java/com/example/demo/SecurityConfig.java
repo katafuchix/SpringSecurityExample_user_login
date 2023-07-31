@@ -28,7 +28,7 @@ public class SecurityConfig {
 		    .loginProcessingUrl("/login") //ログイン処理のパス
 			.loginPage("/login") //ログインページの指定
 			.defaultSuccessUrl("/hello") //ログイン成功後の遷移先（任意で「/hello」とする）
-			.failureUrl("/error") //ログイン失敗時の遷移先（任意で「/login?error」とする）
+			.failureUrl("/login?error=true") //ログイン失敗時の遷移先（任意で「/login?error」とする）
 			.permitAll()
 		).logout(logout -> logout //ログアウトの設定記述開始
 			.logoutSuccessUrl("/login") //ログアウト成功後のリダイレクト先URL

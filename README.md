@@ -25,3 +25,16 @@ http://localhost:8080/
 			<artifactId>thymeleaf-extras-springsecurity6</artifactId>
 		</dependency>
 ```
+
+```
+<body th:with="user=${#authentication.principal.loginUser}">
+
+    <h1>ログイン成功</h1>
+    <h2><span th:text="${user.username}"></span> さんHello!!!!</h2>
+
+    <form th:action="@{/logout}" method="post">
+    <button>Logout</button>
+    </form>
+    
+</body>
+```

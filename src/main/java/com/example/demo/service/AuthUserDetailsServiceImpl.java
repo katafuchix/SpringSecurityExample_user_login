@@ -25,15 +25,15 @@ public class AuthUserDetailsServiceImpl implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
     	
-    	System.out.println("===========");
-    	System.out.println(username);
+    	//System.out.println("===========");
+    	//System.out.println(username);
         //findByUsernameで見つけてきたユーザ情報
         LoginUser loginUser = loginUserMapper.findByUsername(username);
-        System.out.println("===========");
-        System.out.println(loginUser);
+        //System.out.println("===========");
+        //System.out.println(loginUser);
         
     	AuthUserDetails user = new AuthUserDetails(loginUser);
-    	System.out.println(user);
+    	//System.out.println(user);
 		return user;
 
     }

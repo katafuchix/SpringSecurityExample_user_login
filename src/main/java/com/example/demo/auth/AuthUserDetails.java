@@ -12,6 +12,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import com.example.demo.entity.LoginUser;
 
+// UserDetailsを継承して定義
 public class AuthUserDetails implements UserDetails {
 
 	// 認証するユーザー情報
@@ -20,6 +21,7 @@ public class AuthUserDetails implements UserDetails {
 	
 	// コンストラクタ 認証したい任意のユーザー情報を指定
 	public AuthUserDetails(LoginUser loginUser) {
+		// ここでユーザー情報を持たせる
 		this.loginUser = loginUser;
 		// 仮の処理
 		List<String> list = new ArrayList<String>(Arrays.asList(loginUser.getUsername()));
@@ -34,8 +36,7 @@ public class AuthUserDetails implements UserDetails {
 		return loginUser;
 	}
 	
-	
-	// 各メソッドをオーバーライド
+	// 各メソッドをオーバーライド Booleanはすべてtrueで
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
 		// TODO 自動生成されたメソッド・スタブ

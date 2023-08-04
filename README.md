@@ -14,6 +14,10 @@ Spring Boot Login Auth Exmaple with spring-boot-starter-security, thymeleaf-extr
 
 http://localhost:8080/
 
+<div>
+<img width="360" src="https://github.com/katafuchix/SpringSecurityExample_user_login/assets/6063541/b47173ba-646c-42ca-b5d1-ec76e06ec071">
+<img width="360" src="https://github.com/katafuchix/SpringSecurityExample_user_login/assets/6063541/1f8eb3d5-881a-4dbd-be60-ba888ceac55c">
+</div>
 
 ```
 		<dependency>
